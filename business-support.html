@@ -123,6 +123,121 @@ footer{background:#08031a;padding:4rem;border-top:1px solid rgba(155,109,216,0.1
   .wa-btn .wa-label{display:none;}
   .wa-btn{padding:0.85rem;border-radius:50%;}
 }
+
+/* ── MOBILE OPTIMISATION ── */
+@media(max-width:768px){
+  /* NAV */
+  nav{padding:0 1.2rem;height:60px;}
+  .logo{font-size:1.4rem;}
+  .nav-links{display:none;}
+  .nav-cta{display:none;}
+  .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:0.5rem;z-index:200;}
+  .hamburger span{display:block;width:22px;height:2px;background:var(--ac);border-radius:2px;transition:all 0.3s;}
+  .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+  .mobile-menu{position:fixed;inset:0;background:rgba(13,5,32,0.98);z-index:150;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+  .mobile-menu.open{opacity:1;pointer-events:all;}
+  .mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--wh);text-decoration:none;letter-spacing:0.05em;}
+  .mobile-menu a:hover{color:var(--ac);}
+  .mobile-menu .mob-cta{margin-top:1rem;padding:0.8rem 2rem;border:1px solid var(--ac);color:var(--ac);font-family:'DM Sans',sans-serif;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;}
+
+  /* HERO */
+  .hero{min-height:100svh;align-items:flex-end;padding-bottom:3rem;}
+  .hero-content{padding:0 1.5rem;max-width:100%;}
+  .hero-title{font-size:clamp(2.8rem,9vw,4rem);}
+  .hero-sub{font-size:0.9rem;max-width:100%;}
+  .hero-actions{flex-direction:column;align-items:stretch;}
+  .hero-actions a{text-align:center;}
+  .hero-float{display:none;}
+  .marquee-wrap{margin-top:2rem;}
+
+  /* TAX SECTION */
+  .tax-inner{grid-template-columns:1fr!important;gap:2.5rem;padding:3rem 1.5rem!important;}
+  .tax-pricing{grid-template-columns:1fr!important;}
+  .section-title{font-size:clamp(1.8rem,6vw,2.4rem);}
+
+  /* SERVICES */
+  .section-inner{padding:3rem 1.5rem!important;}
+  .services-grid{grid-template-columns:1fr!important;}
+  .service-card{padding:1.8rem 1.5rem;}
+
+  /* ABOUT */
+  .about-inner{grid-template-columns:1fr!important;padding:3rem 1.5rem!important;gap:2.5rem;}
+  .about-visual{height:260px!important;}
+
+  /* PROCESS */
+  .process-steps{grid-template-columns:1fr 1fr!important;gap:2rem;}
+  .process-steps::before{display:none!important;}
+  .process-step{padding:0 0.5rem;}
+
+  /* TESTIMONIAL */
+  .testimonial{padding:3rem 1.5rem;}
+
+  /* CTA */
+  .cta-inner{padding:4rem 1.5rem!important;}
+  .cta-section .btn-primary{display:block;text-align:center;}
+
+  /* FOOTER */
+  footer{padding:2.5rem 1.5rem;}
+  .footer-inner{grid-template-columns:1fr!important;gap:2rem;}
+  .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center;}
+
+  /* WA */
+  .wa-btn .wa-label{display:none;}
+  .wa-btn{padding:0.85rem;border-radius:50%;bottom:1.2rem;right:1.2rem;}
+
+  /* PAGE HERO (inner pages) */
+  .page-hero{padding:6rem 1.5rem 3rem!important;}
+  .page-title{font-size:clamp(2.2rem,7vw,3rem);}
+  .page-sub{font-size:0.9rem;}
+
+  /* BUSINESS SUPPORT */
+  .tax-copy .section-title{font-size:clamp(1.8rem,6vw,2.4rem);}
+  .intro-grid{grid-template-columns:1fr!important;padding:2.5rem 1.5rem!important;gap:1.5rem;}
+  .services-detail-inner{padding:2rem 1.5rem!important;}
+  .service-row{grid-template-columns:1fr!important;gap:1.5rem;}
+  .service-row.reverse{direction:ltr!important;}
+  .service-visual{height:180px!important;}
+  .process-strip-inner{padding:3rem 1.5rem!important;}
+  .process-grid{grid-template-columns:1fr 1fr!important;gap:1.5rem;}
+  .process-grid::before{display:none!important;}
+  .cta-band{padding:3rem 1.5rem!important;}
+  .cta-actions{flex-direction:column;align-items:stretch;}
+  .cta-actions a{text-align:center;}
+
+  /* ABOUT PAGE */
+  .story-inner{grid-template-columns:1fr!important;gap:2rem;padding:3rem 1.5rem!important;}
+  .story-card{padding:2rem 1.5rem;}
+  .story-quote{font-size:1.2rem;}
+  .values-inner{padding:3rem 1.5rem!important;}
+  .values-grid{grid-template-columns:1fr!important;}
+  .journey-inner{padding:3rem 1.5rem!important;}
+  .brands-inner{padding:3rem 1.5rem!important;}
+  .brands-grid{grid-template-columns:1fr 1fr!important;}
+  .timeline{padding-left:1.2rem;}
+
+  /* INSIGHTS */
+  .filter-bar{padding:1rem 1.5rem!important;}
+  .filter-inner{gap:0.4rem;}
+  .filter-btn{font-size:0.68rem;padding:0.35rem 0.8rem;}
+  .featured{padding:2rem 1.5rem 1rem!important;}
+  .featured-card{grid-template-columns:1fr!important;gap:1.5rem;padding:1.5rem!important;}
+  .featured-title{font-size:1.5rem;}
+  .articles{padding:1.5rem 1.5rem 3rem!important;}
+  .articles-grid{grid-template-columns:1fr!important;}
+  .modal{padding:1.5rem;margin:0 0.5rem;}
+  .modal-overlay{padding:4rem 0.5rem 1rem;}
+  .modal-title{font-size:1.4rem;}
+  .cta-strip{padding:3rem 1.5rem!important;}
+}
+
+@media(max-width:400px){
+  .hero-title{font-size:2.5rem;}
+  .process-steps{grid-template-columns:1fr!important;}
+  .process-grid{grid-template-columns:1fr!important;}
+}
+
 </style>
 </head>
 <body>
@@ -139,7 +254,18 @@ footer{background:#08031a;padding:4rem;border-top:1px solid rgba(155,109,216,0.1
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
   <a href="index.html#contact" class="nav-cta">Book a Call</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="business-support.html">Business Support</a>
+  <a href="insights.html">Insights</a>
+  <a href="about.html">About</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="index.html#contact" class="mob-cta">Book a Call</a>
+</div>
 
 <!-- HERO -->
 <div class="page-hero">
