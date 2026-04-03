@@ -1,13 +1,7 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "*.html", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/about", "dest": "/about.html" },
-    { "src": "/business-support", "dest": "/business-support.html" },
-    { "src": "/insights", "dest": "/insights.html" },
-    { "src": "/(.*)", "dest": "/$1" }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/services", "destination": "/services.html" }
   ]
 }
